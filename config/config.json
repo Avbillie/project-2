@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "passport_demo",
+    "password": "1234",
+    "database": "Travelers_Memoir_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "database_test",
+    "password": "1234",
+    "database": "The_Travelers_Memoir_DB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
