@@ -2,39 +2,40 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>The Traveler's Memoir</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <div style="background-image: url('https://a0.muscache.com/im/pictures/de26f95b-fc03-4918-9df9-e3be5593adc8.jpg?im_w=1680');">
+
+    <h1>The Traveler's Memoir</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h2>Login</h2>
+          <form class="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-default">Login</button>
+          </form>
+          <br />
+          <p>Or sign up <a href="/public/signup.html">here</a></p>
+        </div>
       </div>
     </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
-      </div>
-    </div>
+
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
