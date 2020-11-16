@@ -16,7 +16,7 @@ $(document).ready(() => {
 
         // making the sure enters the user name, title and the blog text before they can submit
 
-        if (!inputData.userName && !inputData.title && !inputData.text) {
+        if (!inputData.userName || !inputData.title || !inputData.text) {
 
             return;
         } else {
