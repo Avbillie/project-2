@@ -13,6 +13,7 @@ $(document).ready(() => {
     };
 
     if (!userData.email || !userData.password) {
+      alert("Please enter a valid email address and password.");
       return;
     }
     // If we have an email and password, run the signUpUser function
@@ -29,7 +30,8 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        window.location.replace("/members");
+        alert("Sign Up successful, Thank you!");
+        window.location.replace("/login");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
