@@ -13,7 +13,7 @@ $(document).ready(() => {
     };
 
     if (!userData.email || !userData.password) {
-      return alert("Enter a valid email and password.");
+      return $("p#alert").html("Enter a valid email and password.");
     }
 
     // If we have an email and password we run the loginUser function and clear the form
@@ -34,7 +34,7 @@ $(document).ready(() => {
       })
       .catch(err => {
         console.log(err);
-        return alert("Access Denied, user does not exist.");
+        return $("p#alert").html("Access Denied, user does not exist.");
       });
   }
 });

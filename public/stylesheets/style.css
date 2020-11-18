@@ -3,9 +3,37 @@ form.login {
   margin-top: 50px;
 }
 
+hr{
+  color: #fff;
+  width: 70%;
+}
 /* <<<<<<< venus */
 h1{
   font-family: 'Cormorant Garamond', serif;
+}
+
+.title{
+  margin-left: 2rem!important;
+  margin-right: 2rem!important;
+}
+
+.link{
+  display: inline-flex;
+  padding-left: 0%!important;
+}
+
+.log{
+  max-width: max-content;
+  padding-left: 0%!important;
+}
+
+.alert{
+  color: red;
+  text-align: center;
+  max-width: max-content;
+  font-size: 1.7rem;
+  padding-top: .5rem!important;
+  padding-bottom: .5rem!important;
 }
 
 body {
@@ -35,7 +63,18 @@ a{
   font-size: 150%;
   color:white;
 }
-=======
+
+.page-footer{
+  margin-top: 5rem!important;
+  margin-bottom: 1rem!important;
+}
+
+.navigation{
+  text-align: center!important;
+  align-items: center!important;
+  justify-content: center!important;
+  display: inline-flex;
+}
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
