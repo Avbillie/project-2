@@ -1,20 +1,29 @@
+/* eslint-disable no-unused-vars */
 $(document).ready(() => {
   // Getting references to our form and input
   const signUpForm = $("form.signup");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
+  const reEnterpass = $("input#re-password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", event => {
     event.preventDefault();
     const userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      reEnterpass: reEnterpass.val().trim()
     };
 
     if (!userData.email || !userData.password) {
+      $("p#alert").html("Please enter a valid email address and password.");
       return;
     }
+    if (userData.password !== userData.reEnterpass) {
+      $("p#alert").html("Passwords do not match.");
+      return;
+    }
+
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
     emailInput.val("");
@@ -29,7 +38,8 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        window.location.replace("/members");
+        alert("Sign Up successful, Thank you!");
+        window.location.replace("/");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
