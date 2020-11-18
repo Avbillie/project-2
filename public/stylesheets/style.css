@@ -3,6 +3,39 @@ form.login {
   margin-top: 50px;
 }
 
+/* <<<<<<< venus */
+h1{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  background: url('https://a0.muscache.com/im/pictures/de26f95b-fc03-4918-9df9-e3be5593adc8.jpg?im_w=1680') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#traveler{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about{
+  color:white;
+}
+
+a{
+  font-size: 150%;
+  color:white;
+}
+
+.footer-copyright{
+  font-size: 150%;
+  color:white;
+}
+=======
 /* stylelint-disable selector-list-comma-newline-after */
 
 .blog-header {
@@ -21,3 +54,4 @@ h1, h2, h3, h4, h5, h6 {
 .text-white {
   color: #fff!important;
 }
+/* >>>>>>> main */
