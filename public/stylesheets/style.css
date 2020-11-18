@@ -3,6 +3,7 @@ form.login {
   margin-top: 50px;
 }
 
+/* <<<<<<< venus */
 h1{
   font-family: 'Cormorant Garamond', serif;
 }
@@ -34,3 +35,23 @@ a{
   font-size: 150%;
   color:white;
 }
+=======
+/* stylelint-disable selector-list-comma-newline-after */
+
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+.bg-dark {
+  background-color: #343a40!important;
+}
+
+.text-white {
+  color: #fff!important;
+}
+/* >>>>>>> main */
