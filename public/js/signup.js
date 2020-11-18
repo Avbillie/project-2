@@ -39,7 +39,7 @@ $(document).ready(() => {
     })
       .then(() => {
         alert("Sign Up successful, Thank you!");
-        window.location.replace("/login");
+        window.location.replace("/");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
       .catch(handleLoginErr);
