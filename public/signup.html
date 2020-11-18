@@ -2,24 +2,22 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>The Traveler's Memoir</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
-    </div>
-  </nav>
+
+  <h1>The Traveler's Memoir</h1>
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
+        <h2>Sign Up</h2>
         <form class="signup">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -27,6 +25,9 @@
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+            <br>
+            <label for="exampleInputPassword1">Re-enter Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
           <div style="display: none" id="alert" class="alert alert-danger" role="alert">
@@ -36,10 +37,81 @@
           <button type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
+        <p>Or log in <a href="/public/login.html">here</a></p>
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small indigo">
+    <div class="container">
+      <div class="row pt-5 mb-3">
+        <div class="col-md-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">About us</a>
+          </h6>
+        </div>
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Help</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Contact</a>
+          </h6>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid row-->
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="rgba-white-light" style="margin: 0 15%;">
+        </div>
+      </div>
+
+      <!-- Grid row-->
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4" style="margin-top:100px;">
+
+        <!-- Grid column -->
+        <div class="col-md-12">
+        <p class="about" style="line-height: 1.7rem">Plan your next tracel trip route with The Traveler's Memoir.
+          Enter where you want to
+          start and finish your trip, and then discover other travler's experiences and making planning the unexpected
+          easier than you thought.
+          Most of what you find online will funnel you into the same places, filled with other travelers.
+          It can feel like you need a local guide to get an authentic experience on your trip,
+          but The Traveler's Memoir helps you escape the tourist bubble and find the best stops.</p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+    <!-- Grid row-->
+    <div class="row pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <div class="mb-5 flex-center">
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright</div>
+
+  </footer>
+  <!-- Footer -->
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
