@@ -50,4 +50,9 @@ module.exports = function(app) {
       });
     }
   });
+
+  // rendering the blogs to the handlebars engine
+  app.get("/blog", (req, res) => {
+    res.render("index", db.Blog);
+  });
 };
