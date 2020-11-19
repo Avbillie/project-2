@@ -14,7 +14,7 @@ const db = require("./models");
 const app = express();
 app.use(
   express.urlencoded({
-    extended: true,
+    extended: true
   })
 );
 app.use(express.json());
@@ -31,7 +31,7 @@ app.use(
   session({
     secret: "keyboard cat",
     resave: true,
-    saveUninitialized: true,
+    saveUninitialized: true
   })
 );
 app.use(passport.initialize());
