@@ -3,6 +3,7 @@ $(document).ready(() => {
   const loginForm = $("form.login");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
+  const passwordArr = [];
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
@@ -12,10 +13,28 @@ $(document).ready(() => {
       password: passwordInput.val().trim()
     };
 
+    passwordArr.push(userData);
+
     if (!userData.email || !userData.password) {
       return $("p#alert").html("Enter a valid email and password.");
     }
-
+    passwordArr.forEach(element => {
+      if (userData.password !== element.password) {
+        $("p#alert").html("Access Denied, invalid password.");
+        return;
+      }
+      if (userData.email !== element.email) {
+        $("p#alert").html("Access Denied, invalid email.");
+        return;
+      }
+      if (
+        userData.email &&
+        userData.password !== element.email &&
+        element.password
+      ) {
+        $("p#alert").html("Access Denied, user does not exist.");
+      }
+    });
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
     emailInput.val("");
@@ -34,7 +53,7 @@ $(document).ready(() => {
       })
       .catch(err => {
         console.log(err);
-        return $("p#alert").html("Access Denied, user does not exist.");
+        return;
       });
   }
 });
