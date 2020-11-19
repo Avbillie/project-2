@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
@@ -26,7 +27,21 @@ module.exports = function(app) {
         res.redirect(307, "/api/");
       })
       .catch(err => {
-        res.status(401).json(err);
+        console.log(status(401).json(err));
+      });
+  });
+
+  app.post("/api/blog", (req, res) => {
+    db.Blog.create({
+      username: req.body.userName,
+      title: req.body.title,
+      text: req.body.text
+    })
+      .then(() => {
+        res.redirect(307, "/api/members");
+      })
+      .catch(err => {
+        console.log(status(401).json(err));
       });
   });
 

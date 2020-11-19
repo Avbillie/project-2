@@ -5,7 +5,7 @@ $(document).ready(() => {
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
   const reEnterpass = $("input#re-password-input");
-
+  const userArr = [];
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", event => {
     event.preventDefault();
@@ -14,6 +14,7 @@ $(document).ready(() => {
       password: passwordInput.val().trim(),
       reEnterpass: reEnterpass.val().trim()
     };
+    userArr.push(userData.email);
 
     if (!userData.email || !userData.password) {
       $("p#alert").html("Please enter a valid email address and password.");
@@ -23,6 +24,13 @@ $(document).ready(() => {
       $("p#alert").html("Passwords do not match.");
       return;
     }
+
+    userArr.forEach(element => {
+      if (userData.email === element) {
+        $("p#alert").html("Email already exists.");
+        return;
+      }
+    });
 
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password);
