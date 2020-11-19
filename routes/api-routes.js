@@ -67,7 +67,15 @@ module.exports = function(app) {
   });
 
   // rendering the blogs to the handlebars engine
-  app.get("/blog", (req, res) => {
-    res.render("index", db.Blog);
+  app.get("/blogs", (req, res) => {
+    db.Blog.findAll()
+      .then(data => {
+        console.log(data);
+        res.render("index", { blogs: data });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500);
+      });
   });
 };
