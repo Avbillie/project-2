@@ -1,50 +1,45 @@
 $(document).ready(() => {
   // Getting references to our form and inputs
   const loginForm = $("form.login");
-  const emailInput = $("input#email-input");
+  const userNameInput = $("input#username-input");
   const passwordInput = $("input#password-input");
-  const passwordArr = [];
+  const userArr = [];
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
     event.preventDefault();
+
     const userData = {
-      email: emailInput.val().trim(),
+      username: userNameInput.val().trim(),
       password: passwordInput.val().trim()
     };
 
-    passwordArr.push(userData);
+    userArr.push(userData);
 
-    if (!userData.email || !userData.password) {
-      return $("p#alert").html("Enter a valid email and password.");
+    if (!userData.username || !userData.password) {
+      $("p#alert").html("Enter a valid username and password.");
+      return;
     }
-    passwordArr.forEach(element => {
-      if (userData.password !== element.password) {
-        $("p#alert").html("Access Denied, invalid password.");
-        return;
-      }
-      if (userData.email !== element.email) {
-        $("p#alert").html("Access Denied, invalid email.");
-        return;
-      }
+    userArr.forEach(element => {
       if (
-        userData.email &&
-        userData.password !== element.email &&
+        userData.username &&
+        userData.password !== element.username &&
         element.password
       ) {
-        $("p#alert").html("Access Denied, user does not exist.");
+        $("p#alert").html("Invalid username or password.");
+        return;
       }
     });
     // If we have an email and password we run the loginUser function and clear the form
-    loginUser(userData.email, userData.password);
+    loginUser(userData.username, userData.password);
     emailInput.val("");
     passwordInput.val("");
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
-  function loginUser(email, password) {
+  function loginUser(username, password) {
     $.post("/api/", {
-      email: email,
+      username: username,
       password: password
     })
       .then(() => {
