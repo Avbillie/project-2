@@ -11,7 +11,7 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
     });
   });
 
@@ -21,12 +21,12 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
     })
       .then(() => {
         res.redirect(307, "/api/");
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(status(401).json(err));
       });
   });
@@ -35,12 +35,12 @@ module.exports = function(app) {
     db.Blog.create({
       username: req.body.userName,
       title: req.body.title,
-      text: req.body.text
+      text: req.body.text,
     })
       .then(() => {
         res.redirect(307, "/api/members");
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(status(401).json(err));
       });
   });
@@ -67,7 +67,15 @@ module.exports = function(app) {
   });
 
   // rendering the blogs to the handlebars engine
-  app.get("/blog", (req, res) => {
-    res.render("index", db.Blog);
+  app.get("/blogs", (req, res) => {
+    db.Blog.findAll()
+      .then(data => {
+        console.log(data);
+        res.render("index", { blogs: data });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500);
+      });
   });
 };
