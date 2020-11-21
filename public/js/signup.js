@@ -52,7 +52,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        alert("Sign up successful, user created!");
+        ("Sign up successful, user created!");
         window.location.replace("/");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
