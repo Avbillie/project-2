@@ -35,6 +35,22 @@ h1{
   padding-top: .5rem!important;
   padding-bottom: .5rem!important;
 }
+.alert2{
+  color: red;
+  text-align: center;
+  max-width: max-content;
+  font-size: 1.7rem;
+  margin-top: .5rem!important;
+  margin-left: 1rem;
+}
+.alert3{
+  color:green;
+  text-align: center;
+  max-width: max-content;
+  font-size: 1.7rem;
+  margin-top: .5rem!important;
+  margin-left: 1rem;
+}
 
 body {
   background: url('https://a0.muscache.com/im/pictures/de26f95b-fc03-4918-9df9-e3be5593adc8.jpg?im_w=1680') no-repeat center center fixed;

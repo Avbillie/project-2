@@ -35,7 +35,7 @@ module.exports = function(app) {
 
   app.post("/api/blog", (req, res) => {
     db.Blog.create({
-      username: req.body.username,
+      username: req.user.username,
       title: req.body.title,
       text: req.body.text
     })

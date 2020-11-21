@@ -12,15 +12,12 @@
 <body>
 
 <header>
-<h1>Write Your Blog</h2>
+<h1>Write Your Blog ,</h2>
+<h2 id="userName"></h2>
 </header>
 
 
 <form>
-  <div class="form-group">
-    <label for="userName">User Name</label>
-    <input type="email" class="form-control" id="userName" placeholder="User Name">
-  </div>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" placeholder="Title">
@@ -30,7 +27,11 @@
     <label for="text">Text</label>
     <textarea class="form-control" id="text" rows="10"></textarea>
   </div>
-  <button type="submit" class="btn btn-default" id="submit">Create Blog</button>
+  <div class="link col-lg-12">
+    <button type="submit" class="btn btn-default col-md-1 col-lg-1" id="submit">Create Blog</button>
+    <div id="alertprompts">
+    </div>
+  </div>
 </form>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
