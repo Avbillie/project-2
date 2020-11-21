@@ -28,14 +28,15 @@ h1{
 }
 
 .alert{
+  font-weight: bolder;
   color: red;
   text-align: center;
   max-width: max-content;
   font-size: 1.7rem;
-  padding-top: .5rem!important;
-  padding-bottom: .5rem!important;
+  padding-top:.4rem;
 }
 .alert2{
+  font-weight: bolder;
   color: red;
   text-align: center;
   max-width: max-content;
@@ -44,6 +45,7 @@ h1{
   margin-left: 1rem;
 }
 .alert3{
+  font-weight: bolder;
   color:green;
   text-align: center;
   max-width: max-content;
