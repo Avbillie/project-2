@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>The Traveler's Memoir</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<head>
-  <title>The Traveler's Memoir</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#" id="logo">The Traveler's Memoir</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto links">
+          <span class="my-span"
+            ><a class="nav-item nav-link active link-color" href="/members"
+              ><i class="fas fa-user"></i
+              ><span class="sr-only">(current)</span></a
+            ></span
+          >
+          <span class="my-span"
+            ><a class="nav-item nav-link link-color" href="/blog"
+              >Create New Blog</a
+            ></span
+          >
+          <span class="my-span"
+            ><a class="nav-item nav-link link-color" href="/">Sign out</a></span
+          >
+        </div>
       </div>
-    </div>
-  </nav>
-  
-  <h1 class="title">The Traveler's Memoir</h1>
-  
+    </nav>
 
-  <div class="container">
-    <!-- <header class="blog-header py-3">
+    <h1 class="title">The Traveler's Memoir</h1>
+
+    <div class="container">
+      <!-- <header class="blog-header py-3">
       <div class="row">
         <div class="col-sm-8 align-space-between"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contribute</button>
       
@@ -46,49 +80,69 @@
       </div>
     </header> -->
 
-
-    <div class="jumbotron" style="opacity: 0.8">
-      <div class="container">
-        <h1 id="member-name"class="display-4 font-italic">Welcome Member Name!</h1>
-        <p class="lead my-3">We're glad you're here.</p>
-        <!-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Learn more...</a></p> -->
-      </div>
-    </div>
-
-    <div class="row align-space-between">
-      <div class="col-sm-6">
-        <div class="card text-center">
-          <!-- <i class="fab fa-wpexplorer fa-10x"></i> -->
-          <h2 class="card-header">Traveler Experiences</h2>
-          <div class="card-body">
-            <h4 class="card-text">Discover new stories from our community .</h4>
-            <button type="button" href="#" class="btn member btn-primary btn-lg"><i class="fas fa-glasses fa-lg"></i>Explore</button>
-          </div>
+      <div class="jumbotron" style="opacity: 0.8">
+        <div class="container">
+          <h1 id="member-name" class="display-4 font-italic">
+            Welcome Member Name!
+          </h1>
+          <p class="lead my-3">We're glad you're here.</p>
+          <!-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Learn more...</a></p> -->
         </div>
       </div>
 
-      <div class="col-sm-6">
-        <div class="card text-center">
-          <!-- <i class="fas fa-pen-fancy fa-9x"></i> -->
-          <h2 class="card-header">Share Your Stories</h2>
-          <div class="card-body">
-            <h4 class="card-text">Contribute your own experience to our collection.</h4>
-            <button type="button" class="btn member btn-primary btn-lg"><i class="fas fa-pen fa-lg"></i>Write</button>
+      <div class="row align-space-between">
+        <div class="col-sm-6">
+          <div class="card text-center">
+            <!-- <i class="fab fa-wpexplorer fa-10x"></i> -->
+            <h2 class="card-header">Traveler Experiences</h2>
+            <div class="card-body">
+              <h4 class="card-text">
+                Discover new stories from our community .
+              </h4>
+              <button
+                type="button"
+                href="#"
+                class="btn member btn-primary btn-lg"
+              >
+                <i class="fas fa-glasses fa-lg"></i>Explore
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card text-center">
+            <!-- <i class="fas fa-pen-fancy fa-9x"></i> -->
+            <h2 class="card-header">Share Your Stories</h2>
+            <div class="card-body">
+              <h4 class="card-text">
+                Contribute your own experience to our collection.
+              </h4>
+              <button type="button" class="btn member btn-primary btn-lg">
+                <i class="fas fa-pen fa-lg"></i>Write
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
 
-
-  </div>
-
-
-  
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
-
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+  </body>
 </html>
