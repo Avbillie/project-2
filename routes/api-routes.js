@@ -73,11 +73,11 @@ module.exports = function(app) {
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()
       .then(data => {
-        console.log(data);
+        // console.log(data);
         res.render("index", { blogs: data });
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
         res.status(500);
       });
   });
