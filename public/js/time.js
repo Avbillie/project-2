@@ -3,9 +3,9 @@ const timeData = $(".timeData");
 const timeVal = timeData.text();
 console.log(timeVal);
 
-const convertedTime = moment(timeVal).format("dddd, MMMM Do YYYY");
-console.log(convertedTime);
+// const convertedTime = moment(timeVal).format("dddd, MMMM Do YYYY");
+// console.log(convertedTime);
 
-timeData.val("");
+// timeData.val("");
 
-timeData.text(convertedTime);
+// timeData.text(convertedTime);

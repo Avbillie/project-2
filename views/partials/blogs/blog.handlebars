@@ -1,16 +1,16 @@
 <div class="posts">
     <h2>
-        Author: {{dataValues.userName}}
+        Author: {{userName}}
     </h2>
     <hr>
     <h2>
-        Title: {{dataValues.title}}
+        Title: {{title}}
     </h2>
     <hr>
     <h3 class="timeData">
-        {{dataValues.createdAt}}
+        {{dateFormat createdAt "dddd, MMMM Do YYYY"}}
     </h3>
     <p>
-        {{dataValues.text}}
+        {{text}}
     </p>
 </div>
