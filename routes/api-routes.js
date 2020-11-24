@@ -2,6 +2,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const moment = require("moment");
 const { Op } = require("sequelize");
 
 module.exports = function(app) {
@@ -85,8 +86,8 @@ module.exports = function(app) {
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()
       .then(data => {
-        // console.log(data);
-        res.render("index", { blogs: data });
+        console.log(data);
+        res.render("index", { blogs: data.map(blog => blog.dataValues) });
       })
       .catch(err => {
         // console.log(err);
