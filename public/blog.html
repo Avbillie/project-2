@@ -5,19 +5,37 @@
   <title>Blog Post</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id="logo">The Traveler's Memoir</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup" >
+        <div class="navbar-nav ml-auto links">
 
+            <span class="my-span"><a class="nav-item nav-link active link-color" href="/members"><i class="fas fa-user"></i><span class="sr-only">(current)</span></a></span>
+            <span class="my-span"><a class="nav-item nav-link link-color" href="/blog">Create New Blog</a></span>
+            <span class="my-span"><a class="nav-item nav-link link-color" href="/">Sign out</a></span>
+        </div>
+    </div>
+</nav>
+
+<section>
+
+<form class="my-blog">
 <header>
-<h1>Write Your Blog ,</h2>
-<h2 id="userName"></h2>
+<h1>Share Your Travel Experience</h2>
 </header>
-
-
-<form>
   <div class="form-group">
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" placeholder="Title">
@@ -27,13 +45,21 @@
     <label for="text">Text</label>
     <textarea class="form-control" id="text" rows="10"></textarea>
   </div>
-  <div class="link col-lg-12">
-    <button type="submit" class="btn btn-default col-md-1 col-lg-1" id="submit">Create Blog</button>
-    <div id="alertprompts">
-    </div>
+  <button type="submit" class="btn btn-default blog-btn" id="submit">Create Blog</button>
+  <div id="alertprompts">
   </div>
 </form>
+</section>
 
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/blog.js"></script>
 

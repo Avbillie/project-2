@@ -33,9 +33,11 @@ module.exports = function(app) {
           username: req.body.username,
           email: req.body.email,
           password: req.body.password
-        }).catch(err => {
-          console.log(err);
-        });
+        })
+          .then(() => res.status(201).end())
+          .catch(err => {
+            console.log(err);
+          });
       } else {
         res.status(409).end();
       }
@@ -83,11 +85,11 @@ module.exports = function(app) {
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()
       .then(data => {
-        console.log(data);
+        // console.log(data);
         res.render("index", { blogs: data });
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
         res.status(500);
       });
   });
