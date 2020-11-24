@@ -3,116 +3,135 @@
 
 <head>
   <title>The Traveler's Memoir</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="stylesheets/style.css" rel="stylesheet" />
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet" />
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" />
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id="logo">The Traveler's Memoir</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+      <div class="navbar-nav ml-auto links">
+        <span class="my-span"><a class="nav-item nav-link active link-color" href="/members"><i
+              class="fas fa-user"></i><span class="sr-only">(current)</span></a></span>
+        <span class="my-span"><a class="nav-item nav-link link-color" href="/blog">Create New Blog</a></span>
+        <span class="my-span"><a class="nav-item nav-link link-color" href="/">Sign out</a></span>
       </div>
+
     </div>
   </nav>
 
+  <h1 class="title">The Traveler's Memoir</h1>
+
   <div class="container">
-    <header class="blog-header py-3">
-      <div class="row align-items-center">
-        <div class="col-sm-3"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contribute</button>
+    <!-- <header class="blog-header py-3">
+      <div class="row">
+        <div class="col-sm-8 align-space-between"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Contribute</button>
+      
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Post a Blog</button>
         </div>
         <div class="col-sm-6 text-center">
           <h1>The Traveler's Memoir</h1>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4 align-end">
           <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
       </div>
-    </header>
+    </header> -->
 
-
-    <div class="jumbotron text-white bg-dark">
+    <div class="jumbotron" style="opacity: 0.8">
       <div class="container">
-        <h1 class="display-4 font-italic">Welcome Member Name!</h1>
+        <h1 id="member-name" class="display-4 font-italic">
+          Welcome Member Name!
+        </h1>
         <p class="lead my-3">We're glad you're here.</p>
         <!-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Learn more...</a></p> -->
       </div>
     </div>
 
-    <div class="row">
+    <div class="row align-space-between">
       <div class="col-sm-6">
-        <div class="card">
+        <div class="card text-center">
           <!-- <i class="fab fa-wpexplorer fa-10x"></i> -->
-          <h5 class="card-header">Search by Destination</h5>
+          <h2 class="card-header">Traveler Experiences</h2>
           <div class="card-body">
-            <h5 class="card-title">Traveler Experiences</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Explore</a>
+            <h4 class="card-text">
+              Discover new stories from our community .
+            </h4>
+            <button type="button" href="#" class="btn member btn-primary btn-lg">
+              <i class="fas fa-glasses fa-lg"></i>Explore
+            </button>
           </div>
         </div>
       </div>
 
       <div class="col-sm-6">
-        <div class="card">
+        <div class="card text-center">
           <!-- <i class="fas fa-pen-fancy fa-9x"></i> -->
-          <h5 class="card-header">Share Your Experiences</h5>
+          <h2 class="card-header">Share Your Stories</h2>
           <div class="card-body">
-            <h5 class="card-title">Traveler Experiences</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Write</a>
+            <h4 class="card-text">
+              Contribute your own experience to our collection.
+            </h4>
+            <button type="button" class="btn member btn-primary btn-lg">
+              <i class="fas fa-pen fa-lg"></i>Write
+            </button>
           </div>
         </div>
       </div>
-
     </div>
-    <br>
+  </div>
+  <br>
 
-    <h4>Calendar</h4>
+  <h4>Calendar</h4>
 
-    <div id="calendar" class="container">
-      <div class="calendar">
-        <div class="month"><i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h5></h5>
-            <p></p>
-          </div>
-          <i class="fas fa-angle-right next"></i>
+  <div id="calendar" class="container">
+    <div class="calendar">
+      <div class="month"><i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <h5></h5>
+          <p></p>
         </div>
-        <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
-        </div>
-        <div class="days">
-        </div>
+        <i class="fas fa-angle-right next"></i>
       </div>
-
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="days">
+      </div>
     </div>
-
-
 
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/members.js"></script>
   <script type="text/javascript" src="js/calendar.js"></script>
 
