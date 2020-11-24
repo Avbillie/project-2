@@ -1,3 +1,4 @@
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -105,6 +106,8 @@ button.member {
   max-width: 200px;
 }
 
+/* Explore Page  */
+
 div.explore {
     background-color: white;
     color: inherit;
@@ -123,3 +126,133 @@ a.explore {
   font-size: inherit;
 }
 
+.my-blog{
+  padding: 35px 35px;
+}
+.blog-btn{
+  background-color: rgba(255, 164, 91,1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.blog-btn:hover{
+  background-color: rgba(255, 164, 91, 0.6);
+}
+.my-span {
+  padding: 9px 25px;
+  background-color: rgba(255, 164, 91,1);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-left: 5px;
+}
+.my-span:hover {
+  background-color: rgba(255, 164, 91, 0.8);
+}
+
+
+/* calendar */
+
+#calendar{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+#calendar{
+  width: 100%;
+  height: 100%;
+  color:black;
+  font-weight: 800%;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar{
+  width: 45rem;
+  height: 52rem;
+
+}
+
+.month{
+  width: 100%;
+  height: 12rem;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 2rem;
+  text-align: center;
+}
+
+.month i{
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h5{
+font-size: 3rem;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.2rem;
+margin-bottom: 1rem;
+}
+.month p{
+  font-size: 1.6rem;
+
+}
+
+.weekdays{
+  width: 100%;
+  height:5rem;
+  padding:0.04rem;
+  display:flex;
+  align-items: center;
+}
+
+.weekdays div{
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem/7);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.days{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+}
+
+.days div{
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem/7);
+  height: 5rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-date,
+.next-date{
+opacity: 0.5;
+}
+
+.today{
+  background-color: lightgray;
+}
+
+.days div:hover:not(.today){
+  background-color: #e5e5e5;
+  border:0.2rem solid white;
+  cursor: pointer;
+
+}

@@ -2,6 +2,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const moment = require("moment");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -74,10 +75,10 @@ module.exports = function(app) {
     db.Blog.findAll()
       .then(data => {
         console.log(data);
-        res.render("index", { blogs: data });
+        res.render("index", { blogs: data.map(blog => blog.dataValues) });
       })
       .catch(err => {
-        console.log(err);
+        // console.log(err);
         res.status(500);
       });
   });

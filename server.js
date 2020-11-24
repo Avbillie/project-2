@@ -22,7 +22,10 @@ app.use(express.static("public"));
 app.engine(
   "handlebars",
   exphbs({
-    defaultLayout: "main"
+    defaultLayout: "main",
+    helpers: {
+      dateFormat: require("handlebars-dateformat")
+    }
   })
 );
 app.set("view engine", "handlebars");
