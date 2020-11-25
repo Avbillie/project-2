@@ -134,6 +134,35 @@ a.member {
   background-color: gray!important;
 }
 
+.welcomeMessage{
+  height: max-content;
+  padding: 2rem 1rem 2rem 2rem!important;
+  margin: auto 0!important;
+}
+
+.selectionContainer{
+  width: max-content!important;
+  height: max-content!important;
+  padding: 0rem 1.5rem!important;
+  margin: 0 0 auto 0;
+}
+
+.travelLocation{
+  font-style: italic;
+}
+
+.cityOptions{
+  height: 2rem!important;
+  margin: auto 0;
+}
+
+.submitBtn{
+  height: 2rem!important;
+  margin: auto 0 auto .1rem;
+  background-color: #007bff;
+  color: #fff;
+}
+
 /* Explore Page  */
 
 h1.explore {

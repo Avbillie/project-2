@@ -28,9 +28,9 @@
     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
       <ul class="navbar-nav ml-auto links">
         <li class="nav-item"><span><a class="nav-link active" href="/members"><i class="fas fa-user"></i><span
-              class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a class="nav-item nav-link" href="/blog">Create New Blog</a></li>
-                <li class="nav-item"><a class="nav-item nav-link" href="/logout">Logout</a></li>
+                class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="/blog">Create New Blog</a></li>
+        <li class="nav-item"><a class="nav-item nav-link" href="/logout">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -48,17 +48,32 @@
         <h1 id="member-name" class="display-4 font-italic">
           Welcome Member Name!
         </h1>
-
-        <p class="lead my-3">We're glad you're here.</p>
+        
+          <nav class="selectionContainer row jumbotron " style="opacity: 0.8">
+            <form class="selectCity row" action="submit">
+              <p class="travelLocation lead  my-3">
+                We're glad you're here, here
+                are some popular travel locations: </p>
+              <select class="cityOptions ml-2" id="cityValue">
+                <option value="New York">New York</option>
+                <option value="Florida">Florida</option>
+                <option value="Los Angeles">Los Angeles</option>
+                <option value="Palm Springs">Palm Springs</option>
+              </select>
+              <button class="submitBtn" id="submitBtn" type="submit">Go!</button>
+            </form>
+          </nav>
+   
       </div>
     </div>
-    <div class="jumbotron row container" style="opacity: 0.8">
-          <div class="jumbotron tours-activities" id="tours-activities" style="opacity: 0.8">
-          
-          </div>
-          <div class="jumbotron tours-activities" style="opacity: 0.8">
 
-          </div>
+    <div class="jumbotron row container" style="opacity: 0.8">
+      <div class="jumbotron tours-activities" id="tours-activities" style="opacity: 0.8">
+
+      </div>
+      <div class="jumbotron tours-activities" style="opacity: 0.8">
+
+      </div>
     </div>
     <div class="row align-space-between">
       <div class="col-sm-4">
@@ -114,51 +129,18 @@
   </div>
   <br>
 
-<<<<<<< HEAD
-=======
-  <!-- <h4>Calendar</h4>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
-  <div id="calendar" class="container">
-    <div class="calendar">
-      <div class="month"><i class="fas fa-angle-left prev"></i>
-        <div class="date">
-          <h5></h5>
-          <p></p>
-        </div>
-        <i class="fas fa-angle-right next"></i>
-      </div>
-      <div class="weekdays">
-        <div>Sun</div>
-        <div>Mon</div>
-        <div>Tue</div>
-        <div>Wed</div>
-        <div>Thu</div>
-        <div>Fri</div>
-        <div>Sat</div>
-      </div>
-      <div class="days">
-      </div>
-    </div>
-
-  </div> -->
-
->>>>>>> f712fcaf52ef47807bdde8a20a5ce81f3d4a7bef
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-  <script type="text/javascript" src="js/members.js"></script>
-  <script type="text/javascript" src="js/calendar.js"></script>
-  <script type="text/javascript" src="js/amadeus.js"></script>
-<<<<<<< HEAD
-=======
+    <script type="text/javascript" src="js/members.js"></script>
+    <script type="text/javascript" src="js/calendar.js"></script>
+    <script type="text/javascript" src="js/amadeus.js"></script>
 
->>>>>>> f712fcaf52ef47807bdde8a20a5ce81f3d4a7bef
 
 </body>
 
