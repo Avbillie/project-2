@@ -3,9 +3,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const moment = require("moment");
-
 const Amadeus = require("amadeus");
-
 const { Op } = require("sequelize");
 
 module.exports = function(app) {
