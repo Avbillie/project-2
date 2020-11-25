@@ -88,6 +88,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 20px;
 }
 
+/* MEMBER LANDING PAGE */
+
+.jumbotron {
+  margin-top: 50px;
+  opacity: 0.8;
+}
 .card {
   background-color: white;
   color: inherit;
@@ -99,11 +105,12 @@ i {
   padding-right: 10px;
 }
 
-button.member {
+a.member {
   padding: 20px;
   font-size: 15px;
   min-width: 200px;
   max-width: 200px;
+  font-size: 1rem;
 }
 
 /* Explore Page  */
@@ -126,6 +133,7 @@ a.explore {
   font-size: inherit;
 }
 
+/* COMMUNITY BLOG  */
 .my-blog{
   padding: 35px 35px;
 }
