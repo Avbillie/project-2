@@ -6,33 +6,7 @@ $(document).ready(() => {
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
   const reEnterpass = $("input#re-password-input");
-  const userArr = [];
-  // const specialChar = [
-  //   "!",
-  //   "@",
-  //   "#",
-  //   "$",
-  //   "%",
-  //   "^",
-  //   "&",
-  //   "*",
-  //   "()",
-  //   "{",
-  //   "[",
-  //   "}",
-  //   "]",
-  //   "|",
-  //   ";",
-  //   ":",
-  //   "<",
-  //   ">",
-  //   "?",
-  //   "/",
-  //   "*",
-  //   "-",
-  //   "+",
-  //   "~"
-  // ];
+  const alertDiv = $("#alertprompts");
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", event => {
     event.preventDefault();
@@ -42,27 +16,23 @@ $(document).ready(() => {
       password: passwordInput.val().trim(),
       reEnterpass: reEnterpass.val().trim()
     };
-    userArr.push(userData);
 
     if (!userData.username || !userData.email || !userData.password) {
-      $("p#alert").html(
-        "Please enter a valid username, email address and password."
+      $(alertDiv).html(
+        "<p class = 'alert'>Please enter a valid username, email address and password.</p>"
       );
       return;
     }
     if (userData.password !== userData.reEnterpass) {
-      $("p#alert").html("Passwords do not match.");
+      $(alertDiv).html("<p class = 'alert'>Passwords do not match.</p>");
+      // eslint-disable-next-line no-else-return
       return;
     }
-    userArr.forEach(element => {
-      if (
-        userData.email === element.email ||
-        userData.username === element.username
-      ) {
-        $("p#alert").html("Username or Email address already exists.");
-        return;
-      }
-    });
+    signUpUser(userData.username, userData.email, userData.password);
+    usernameInput.val("");
+    emailInput.val("");
+    passwordInput.val("");
+
     // specialChar.forEach(element => {
     //   if (userData.username === element) {
     //     $("p#alert").html("Username cannot contain special characters.");
@@ -71,25 +41,27 @@ $(document).ready(() => {
     // });
 
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.username, userData.password);
-    usernameInput.val("");
-    emailInput.val("");
-    passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(username, password) {
+  function signUpUser(username, email, password) {
     $.post("/api/signup", {
       username: username,
+      email: email,
       password: password
     })
       .then(() => {
-        alert("Sign Up successful, Thank you!");
-        window.location.replace("/");
+        alert("Sign up successful, user created!");
+        window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
-      .catch(handleLoginErr);
+      .catch(err => {
+        console.log(err);
+        $(alertDiv).html(
+          "<p class = 'alert'>Username or email address already exists.</p>"
+        );
+      });
   }
 
   function handleLoginErr(err) {

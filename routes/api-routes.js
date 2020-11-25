@@ -4,6 +4,10 @@ const db = require("../models");
 const passport = require("../config/passport");
 const moment = require("moment");
 
+const Amadeus = require("amadeus");
+
+const { Op } = require("sequelize");
+
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
@@ -21,22 +25,33 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", (req, res) => {
-    db.User.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password
-    })
-      .then(() => {
-        res.redirect(307, "/api/");
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    //const credentials = JSON.parse(req.body.username);
+
+    db.User.findOne({
+      where: {
+        [Op.or]: [{ username: req.body.username }, { email: req.body.email }]
+      }
+    }).then(data => {
+      if (!data) {
+        db.User.create({
+          username: req.body.username,
+          email: req.body.email,
+          password: req.body.password
+        })
+          .then(() => res.status(201).end())
+          .catch(err => {
+            console.log(err);
+          });
+      } else {
+        res.status(409).end();
+      }
+      console.log(data);
+    });
   });
 
   app.post("/api/blog", (req, res) => {
     db.Blog.create({
-      username: req.body.username,
+      username: req.user.username,
       title: req.body.title,
       text: req.body.text
     })
@@ -69,7 +84,25 @@ module.exports = function(app) {
       });
     }
   });
-
+  app.get("/api/amadeus", (req, res) => {
+    const amadeus = new Amadeus({
+      clientId: "f7Xk43X6vCKy4bTzLXcc3zIrxJfKnhnq",
+      clientSecret: "hAaRJxTcBtZwByh3"
+    });
+    amadeus.shopping.activities
+      .get({
+        latitude: 41.397158,
+        longitude: 2.160873
+      })
+      .then(response => {
+        console.log(response);
+        res.json(response.data);
+      })
+      .catch(response => {
+        res.status(500).end();
+        console.error(response);
+      });
+  });
   // rendering the blogs to the handlebars engine
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()
