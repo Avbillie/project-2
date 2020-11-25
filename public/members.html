@@ -16,24 +16,26 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#" id="logo">
-      <h1 class="title">The Traveler's Memoir</h1>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="opacity: 0.8">
+    <a class="navbar-brand mb-0 h1" style="font-size: 2rem" href="#" id="logo">
+      The Traveler's Memoir
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-      <div class="navbar-nav ml-auto links">
-        <span class="my-span"><a class="nav-item nav-link active link-color" href="/members"><i
-              class="fas fa-user"></i><span class="sr-only">(current)</span></a></span>
-        <span class="my-span"><a class="nav-item nav-link link-color" href="/blog">Create New Blog</a></span>
-        <span class="my-span"><a class="nav-item nav-link link-color" href="/">Sign out</a></span>
-      </div>
-
+      <ul class="navbar-nav ml-auto links">
+        <li class="nav-item"><span><a class="nav-link active" href="/members"><i class="fas fa-user"></i><span
+              class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-item nav-link" href="/blog">Create New Blog</a></li>
+                <li class="nav-item"><a class="nav-item nav-link" href="/logout">Logout</a></li>
+      </ul>
     </div>
   </nav>
+
+
 
   <div class="container mt-5">
     <div class="jumbotron welcome-container" style="opacity: 0.8">
@@ -48,7 +50,6 @@
         </h1>
 
         <p class="lead my-3">We're glad you're here.</p>
-        <!-- <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Learn more...</a></p> -->
       </div>
     </div>
     <div class="jumbotron row container" style="opacity: 0.8">
@@ -60,22 +61,21 @@
           </div>
     </div>
     <div class="row align-space-between">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="card text-center">
-          <!-- <i class="fab fa-wpexplorer fa-10x"></i> -->
           <h2 class="card-header">Traveler Experiences</h2>
           <div class="card-body">
             <h4 class="card-text">
-              Discover new stories from our community .
+              Discover new stories from our community blog.
             </h4>
-            <button type="button" href="#" class="btn member btn-primary btn-lg">
-              <i class="fas fa-glasses fa-lg"></i>Explore
-            </button>
+            <a type="button" href="/blogs" class="btn member btn-primary btn-lg">
+              <i class="fas fa-glasses fa-lg"></i>READ
+            </a>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="card text-center">
           <!-- <i class="fas fa-pen-fancy fa-9x"></i> -->
           <h2 class="card-header">Share Your Stories</h2>
@@ -83,9 +83,23 @@
             <h4 class="card-text">
               Contribute your own experience to our collection.
             </h4>
-            <button type="button" class="btn member btn-primary btn-lg">
-              <i class="fas fa-pen fa-lg"></i>Write
-            </button>
+            <a type="button" href="/blog" class="btn member btn-primary btn-lg">
+              <i class="fas fa-pen fa-lg"></i>WRITE
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card text-center">
+          <h2 class="card-header">Explore Our Resources</h2>
+          <div class="card-body">
+            <h4 class="card-text">
+              Check out our resources for travel ideas & inspiration.
+            </h4>
+            <a type="button" href="explore.html" class="btn member btn-primary btn-lg">
+              <i class="fas fa-pen fa-lg"></i>EXPLORE
+            </a>
           </div>
         </div>
       </div>
@@ -100,17 +114,51 @@
   </div>
   <br>
 
+<<<<<<< HEAD
+=======
+  <!-- <h4>Calendar</h4>
+
+
+  <div id="calendar" class="container">
+    <div class="calendar">
+      <div class="month"><i class="fas fa-angle-left prev"></i>
+        <div class="date">
+          <h5></h5>
+          <p></p>
+        </div>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+      <div class="days">
+      </div>
+    </div>
+
+  </div> -->
+
+>>>>>>> f712fcaf52ef47807bdde8a20a5ce81f3d4a7bef
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
     integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
+    </script>
   <script type="text/javascript" src="js/members.js"></script>
   <script type="text/javascript" src="js/calendar.js"></script>
   <script type="text/javascript" src="js/amadeus.js"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f712fcaf52ef47807bdde8a20a5ce81f3d4a7bef
 
 </body>
 
