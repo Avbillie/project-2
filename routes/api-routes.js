@@ -3,8 +3,9 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const moment = require("moment");
-const Amadeus = require("amadeus");
 const { Op } = require("sequelize");
+const Amadeus = require("amadeus");
+const axios = require("axios");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -82,25 +83,32 @@ module.exports = function(app) {
       });
     }
   });
-  app.get("/api/amadeus", (req, res) => {
-    const amadeus = new Amadeus({
-      clientId: "f7Xk43X6vCKy4bTzLXcc3zIrxJfKnhnq",
-      clientSecret: "hAaRJxTcBtZwByh3"
-    });
-    amadeus.shopping.activities
-      .get({
-        latitude: 41.397158,
-        longitude: 2.160873
-      })
-      .then(response => {
-        console.log(response);
-        res.json(response.data);
-      })
-      .catch(response => {
-        res.status(500).end();
-        console.error(response);
+  app.post("/api/amadeus", (req, res) => {
+    const apiKey = "df40e453f18e8b1150a67320b38cc787";
+
+    const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${req.body.cityName}&appid=${apiKey}`;
+
+    axios.get(queryURL).then(response => {
+      const amadeus = new Amadeus({
+        clientId: "f7Xk43X6vCKy4bTzLXcc3zIrxJfKnhnq",
+        clientSecret: "hAaRJxTcBtZwByh3"
       });
+      amadeus.shopping.activities
+        .get({
+          latitude: response.data.coord.lat,
+          longitude: response.data.coord.lon
+        })
+        .then(response => {
+          console.log(response);
+          res.json(response.data);
+        })
+        .catch(response => {
+          res.status(500).end();
+          console.error(response);
+        });
+    });
   });
+
   // rendering the blogs to the handlebars engine
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()

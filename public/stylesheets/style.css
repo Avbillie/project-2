@@ -130,6 +130,10 @@ a.member {
   font-size: 1rem;
 }
 
+.tours-activities{
+  background-color: gray!important;
+}
+
 /* Explore Page  */
 
 h1.explore {
