@@ -3,6 +3,7 @@
 const db = require("../models");
 const passport = require("../config/passport");
 const moment = require("moment");
+const Amadeus = require("amadeus");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -69,7 +70,26 @@ module.exports = function(app) {
       });
     }
   });
+  app.get("/api/amadeus", (req, res) => {
+    const amadeus = new Amadeus({
+      clientId: "f7Xk43X6vCKy4bTzLXcc3zIrxJfKnhnq",
+      clientSecret: "hAaRJxTcBtZwByh3"
+    });
 
+    amadeus.shopping.flightOffersSearch
+      .get({
+        originLocationCode: "SYD",
+        destinationLocationCode: "BKK",
+        departureDate: "2021-04-01",
+        adults: "2"
+      })
+      .then(response => {
+        res.json(response.data);
+      })
+      .catch(responseError => {
+        res.status(500).end();
+      });
+  });
   // rendering the blogs to the handlebars engine
   app.get("/blogs", (req, res) => {
     db.Blog.findAll()
