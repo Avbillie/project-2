@@ -1,32 +1,41 @@
 $(document).ready(() => {
   const submit = $("#submit");
   const userName = $("#userName");
-  const title = $("#title");
-  const text = $("#text");
+  const title = $("input#title");
+  const text = $("textarea#text");
+  const alertDiv = $("#alertprompts");
+  $.get("/api/user_data").then(data => {
+    $(userName).text(data.username);
+  });
 
-  submit.on("submit", event => {
+  submit.on("click", event => {
     event.preventDefault();
-
+    alertDiv.text("");
     const inputData = {
-      userName: userName.val().trim(),
       title: title.val(),
       text: text.val()
     };
 
     // making the sure enters the user name, title and the blog text before they can submit
 
-    if (!inputData.userName || !inputData.title || !inputData.text) {
+    if (!inputData.title || !inputData.text) {
+      $(alertDiv).append(
+        "<p class = 'alert2'> You must include a title and text.</p>"
+      );
       return;
+      // eslint-disable-next-line no-else-return
+    } else {
+      $(alertDiv).append("<p class = 'alert3'>Blog posted succesfully!</p>");
     }
-    blogData(inputData.userName, inputData.title, inputData.text);
-    userName.val("");
+
+    blogData(inputData.title, inputData.text);
+
     title.val("");
     text.val("");
   });
 
-  function blogData(name, blogTitle, blogText) {
-    $post("api/blog", {
-      userName: name,
+  function blogData(blogTitle, blogText) {
+    $.post("/api/blog", {
       title: blogTitle,
       text: blogText
     })
