@@ -1,4 +1,7 @@
 //date object
+const calendar = $("#calendar-container");
+const calendarImg = $("#calendar-image");
+const dateC = $("#dateId");
 const date = new Date();
 
 // render function
@@ -47,10 +50,9 @@ const renderCalendar = () => {
     "November",
     "December"
   ];
-
-  document.querySelector(".date h5").innerHTML = months[date.getMonth()];
-
   document.querySelector(".date p").innerHTML = new Date().toDateString();
+  document.querySelector(".date2 h5").innerHTML = months[date.getMonth()];
+  document.querySelector(".date2 p").innerHTML = new Date().toDateString();
 
   //display the days
   let days = "";
@@ -75,15 +77,55 @@ const renderCalendar = () => {
     monthDays.innerHTML = days;
   }
 };
+$(dateC).on("click", () => {
+  $(calendar).html(`
+  <div id="calendar" class="jumbotron container mb-4" style="opacity: 0.8">
+  <div class="calendar">
+  <div class="month"><i class="fas fa-angle-left prev"></i>
+    <div class="date2">
+      <h5></h5>
+      <p></p>
+    </div>
+    <i class="fas fa-angle-right next"></i>
+  </div>
+  <div class="weekdays">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="days">
+  </div>
+</div>
+</div>`);
+  $(calendarImg).html(`
+<div id="bloglist" class="jumbotron container mb-4" style="opacity: 0.8">
+<h3>Recent Blogs</h3>
+</div>
+`);
+  $(".prev").on("click", () => {
+    date.setMonth(date.getMonth() - 1);
+    renderCalendar();
+  });
+  $(".next").on("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    renderCalendar();
+  });
+  renderCalendar();
+});
+renderCalendar();
 
-document.querySelector(".prev").addEventListener("click", () => {
+$(".prev").on("click", () => {
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
 });
-
-document.querySelector(".next").addEventListener("click", () => {
+$(".next").on("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-
-renderCalendar();
+/* <div id="bloglist" class="jumbotron container mb-4" style="opacity: 0.8">
+<h3>Most viewed blogs</h3>
+</div> */
