@@ -75,19 +75,18 @@ module.exports = function(app) {
       clientId: "f7Xk43X6vCKy4bTzLXcc3zIrxJfKnhnq",
       clientSecret: "hAaRJxTcBtZwByh3"
     });
-
-    amadeus.shopping.flightOffersSearch
+    amadeus.shopping.activities
       .get({
-        originLocationCode: "SYD",
-        destinationLocationCode: "BKK",
-        departureDate: "2021-04-01",
-        adults: "2"
+        latitude: 41.397158,
+        longitude: 2.160873
       })
       .then(response => {
+        console.log(response);
         res.json(response.data);
       })
-      .catch(responseError => {
+      .catch(response => {
         res.status(500).end();
+        console.error(response);
       });
   });
   // rendering the blogs to the handlebars engine
