@@ -123,6 +123,10 @@ button.member {
   max-width: 200px;
 }
 
+.tours-activities{
+  background-color: gray!important;
+}
+
 /* Explore Page  */
 
 div.explore {
