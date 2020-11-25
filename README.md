@@ -26,17 +26,17 @@ Sankung Sillah--Floating between Front-end & Back-end
 
 
 # Application Wireframe:
-![JavaScript code quiz](img/wire-frame-1.jpg)
+![Project-2 WireFrame](img/wire-frame-1.jpg)
 
-![JavaScript code quiz](img/wire-frame-2.jpg)
+![Project-2 WireFrame](img/wire-frame-2.jpg)
 
-![JavaScript code quiz](img/wire-frame-3.jpg)
+![Project-2 WireFrame](img/wire-frame-3.jpg)
 
-![JavaScript code quiz](img/wire-frame-4.jpg)
+![Project-2 WireFrame](img/wire-frame-4.jpg)
 
-![JavaScript code quiz](img/wire-frame-5.jpg)
+![Project-2 WireFrame](img/wire-frame-5.jpg)
 
-![JavaScript code quiz](img/wire-frame-6.jpg)
+![Project-2 WireFrame](img/wire-frame-6.jpg)
 
 # Technologies Used:
 - Item 1 Front-end
