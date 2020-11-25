@@ -36,9 +36,6 @@ $(document).ready(() => {
          console.log(err);
        });
    }
-});
-
-// this function will grab the data received from amadeus and render the elements 
 
 function renderEl1(data) {
   $("#displayEl").empty();
@@ -90,3 +87,7 @@ function renderEl3(data) {
   div.append(name, img, placeDes, booking);
   $("#displayEl").append(div);
 }
+
+});
+
+// this function will grab the data received from amadeus and render the elements 
