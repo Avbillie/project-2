@@ -39,21 +39,21 @@ Sankung Sillah--Floating between Front-end & Back-end
 ![Project-2 WireFrame](img/wire-frame-6.jpg)
 
 # Technologies Used:
-- Item 1 Front-end
-  - Sub Item 1 Bootstrap
-  - Sub Item 2 Handlebars
-  - Item 2 Back-end
-  - Sub Item 1 Node.js
-  - Sub Item 2 Express
-  - Sub Item 3 Sequelize
-  - Sub Item 4 MySQL
-- Item 3 Handlebars Template
-  - Sub Item 1 Templating engine
-- Item 4 Database
-  - Sub Item 1 MySQL database
-- Item 5 Express
-  - Sub Item 1 For HTML routing and API queries
-- Item 6 Testing
-  - Sub Item 1 Travis CI
-- Item 7 Deployment
-  - Sub Item 1 Heroku
+- Item 1: Front-end
+  - Sub Item 1: Bootstrap
+  - Sub Item 2: Handlebars
+  - Item 2: Back-end
+  - Sub Item 1: Node.js
+  - Sub Item 2: Express
+  - Sub Item 3: Sequelize
+  - Sub Item 4: MySQL
+- Item 3: Handlebars Template
+  - Sub Item 1: Templating engine
+- Item 4: Database
+  - Sub Item 1: MySQL database
+- Item 5: Express
+  - Sub Item 1: For HTML routing and API queries
+- Item 6: Testing
+  - Sub Item 1: Travis CI
+- Item 7: Deployment
+  - Sub Item 1: Heroku
