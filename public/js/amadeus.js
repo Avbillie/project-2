@@ -27,10 +27,11 @@ $(document).ready(() => {
               </div>
             
               <div class='textbox jumbotron' style= ' 
+              opacity: none!important;
               background-color:gray;
               color: white;
-              padding: 1rem;
-              margin: 1rem 0rem 0rem 0rem;
+              padding: .5rem!important;
+              margin: 1rem 1rem 0rem 1rem;
             >
             <p class='text'>${data[1].shortDescription}</p>
             </div>
