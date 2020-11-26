@@ -13,11 +13,15 @@ module.exports = function(app) {
   // Otherwise the user will be sent an error
   app.post("/api/", passport.authenticate("local"), (req, res) => {
     // Sending back a password, even a hashed password, isn't a good idea
-    res.json({
-      username: req.body.username,
-      email: req.user.email,
-      id: req.user.id
-    });
+    res
+      .json({
+        username: req.body.username,
+        email: req.user.email,
+        id: req.user.id
+      })
+      .catch(err => {
+        console.log(503, err);
+      });
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
@@ -58,7 +62,7 @@ module.exports = function(app) {
         res.redirect(307, "/api/members");
       })
       .catch(err => {
-        console.log(err);
+        console.log(503, err);
       });
   });
 
