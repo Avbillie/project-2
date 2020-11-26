@@ -11,6 +11,7 @@ $(document).ready(() => {
       "x-rapidapi-host": "microsoft-azure-bing-news-search-v1.p.rapidapi.com"
     }
   };
+  //
 
   $.ajax(settings).done(response => {
     // console.log(response);
