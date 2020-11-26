@@ -48,33 +48,28 @@
         <h1 id="member-name" class="display-4 font-italic">
           Welcome Member Name!
         </h1>
-        
-          <nav class="selectionContainer row jumbotron " style="opacity: 0.8">
-            <form class="selectCity row" action="submit">
-              <p class="travelLocation lead  my-3">
-                We're glad you're here, here
-                are some popular travel locations: </p>
-              <select class="cityOptions ml-2" id="cityValue">
-                <option value="New York">New York</option>
-                <option value="Florida">Florida</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="Palm Springs">Palm Springs</option>
-              </select>
-              <button class="submitBtn" id="submitBtn" type="submit">Go!</button>
-            </form>
-          </nav>
-   
-      </div>
-    </div>
 
-    <div class="jumbotron row container" style="opacity: 0.8">
-      <div class="jumbotron tours-activities" id="tours-activities" style="opacity: 0.8">
-
-      </div>
-      <div class="jumbotron tours-activities" style="opacity: 0.8">
+        <nav class="selectionContainer row jumbotron " style="opacity: 0.8">
+          <form class="selectCity row">
+            <p class="travelLocation lead  my-3">
+              We're glad you're here, here
+              are some popular travel locations: </p>
+            <select class="cityOptions ml-2" id="cityValue">
+              <option value="New York">New York</option>
+              <option value="Florida">Florida</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="Palm Springs">Palm Springs</option>
+            </select>
+            <button class="submitBtn" id="submitBtn">Go!</button>
+          </form>
+        </nav>
 
       </div>
     </div>
+
+    <div class="row" id="displayEl" style="opacity: 100">
+    </div>
+
     <div class="row align-space-between">
       <div class="col-sm-4">
         <div class="card text-center">
@@ -129,17 +124,17 @@
   </div>
   <br>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="js/members.js"></script>
-    <script type="text/javascript" src="js/calendar.js"></script>
-    <script type="text/javascript" src="js/amadeus.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="js/calendar.js"></script>
+  <script type="text/javascript" src="js/amadeus.js"></script>
 
 
 </body>
