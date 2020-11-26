@@ -16,7 +16,6 @@ module.exports = function(app) {
     res
       .json({
         username: req.body.username,
-        email: req.user.email,
         id: req.user.id
       })
       .catch(err => {
