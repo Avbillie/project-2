@@ -25,6 +25,7 @@ h1{
 .log{
   max-width: max-content;
   padding-left: 0%!important;
+  color:white!important;
 }
 
 .alert{
@@ -362,5 +363,9 @@ opacity: 0.5;
 }
 
 .screen{
-  margin: 0 auto;
+  margin: 4rem auto 0rem;
+}
+
+.title{
+  margin: 1rem 0rem 0rem 1rem!important;
 }
