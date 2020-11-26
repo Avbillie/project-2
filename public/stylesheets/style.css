@@ -353,3 +353,14 @@ opacity: 0.5;
   justify-content: center!important;
   text-align: center!important;
 }
+
+
+.flights{
+  width: max-content!important;
+  padding: 1rem!important;
+  margin: auto 0 1rem;
+}
+
+.screen{
+  margin: 0 auto!important;
+}
