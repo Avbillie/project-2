@@ -21,7 +21,7 @@ $(document).ready(() => {
     }
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.username, userData.password);
-    emailInput.val("");
+    userNameInput.val("");
     passwordInput.val("");
   });
 
