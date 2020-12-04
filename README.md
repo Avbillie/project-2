@@ -5,7 +5,7 @@ This full stack application creates an online community where travelers can rese
 
 This application uses the MVC design pattern backed by a mySQL database and a Sequelize ORM. 
 
-#Installation
+# Installation
 This application is deployed on Heroku at https://project-2-vasd.herokuapp.com/
 
 # MVP
@@ -33,7 +33,7 @@ This application was created with:
 
 # The Team
 Questions? Find our team on Github:
-@Avbillie Back End Development
-@DS1826 Front & Back End Development
-@venus Front-end Development
-@sankung1 Front & Back End Development
+* @Avbillie Back End Development
+* @DS1826 Front & Back End Development
+* @venus Front-end Development
+* @sankung1 Front & Back End Development
