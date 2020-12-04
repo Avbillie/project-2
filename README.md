@@ -1,59 +1,39 @@
-# Project 2 -- The Traveler's Memoir
+# Project 2: The Traveler's Memoir :earth_americas:
 
-# The Traveler's memoir - Link
+# General Information
+This full stack application creates an online community where travelers can research and share personal travel experiences, as well as access additional resources for travel planning.
 
+This application uses the MVC design pattern backed by a mySQL database and a Sequelize ORM. 
 
-# Team Members: 
-```
-Anthony Billie--Back-end
-Dina Saunders--Floating between Front-end & Back-end
-Venus Hu--Front-end
-Sankung Sillah--Floating between Front-end & Back-end
-```
+#Installation
+This application is deployed on Heroku at https://project-2-vasd.herokuapp.com/
 
-# Project Description:
-```
-1)Users should be able to use the website to search travle ideas (Access personal travle ideas)
-2)Travler Experiences (User can provide the travle experience)
-```
-
-
-# MVP:
+# MVP
 1. Authentication/Login
 2. Create user accounts
 3. Search Function
 4. User provide feedback
 
 
-# Application Wireframe:
-![Project-2 WireFrame](img/wire-frame-1.jpg)
+# Screenshots
+<img width="1197" alt="Screen Shot 2020-12-04 at 2 56 06 PM" src="https://user-images.githubusercontent.com/67653440/101209176-5adae080-3641-11eb-916b-e05010489823.png">
 
-![Project-2 WireFrame](img/wire-frame-2.jpg)
+<img width="1196" alt="Screen Shot 2020-12-04 at 2 57 24 PM" src="https://user-images.githubusercontent.com/67653440/101209186-5dd5d100-3641-11eb-9b35-26492ca82b59.png">
 
-![Project-2 WireFrame](img/wire-frame-3.jpg)
+# Technologies
+This application was created with: 
+* Bootstrap
+* Handlebars
+* Node.js
+* Express
+* Sequelize
+* mySQL
+* Travis CI
+* Deployed on Heroku with JawsDB 
 
-![Project-2 WireFrame](img/wire-frame-4.jpg)
-
-![Project-2 WireFrame](img/wire-frame-5.jpg)
-
-![Project-2 WireFrame](img/wire-frame-6.jpg)
-
-# Technologies Used:
-- Item 1: Front-end
-  - Sub Item 1: Bootstrap
-  - Sub Item 2: Handlebars
-  - Item 2: Back-end
-  - Sub Item 1: Node.js
-  - Sub Item 2: Express
-  - Sub Item 3: Sequelize
-  - Sub Item 4: MySQL
-- Item 3: Handlebars Template
-  - Sub Item 1: Templating engine
-- Item 4: Database
-  - Sub Item 1: MySQL database
-- Item 5: Express
-  - Sub Item 1: For HTML routing and API queries
-- Item 6: Testing
-  - Sub Item 1: Travis CI
-- Item 7: Deployment
-  - Sub Item 1: Heroku
+# The Team
+Questions? Find our team on Github:
+@Avbillie Back End Development
+@DS1826 Front & Back End Development
+@venus Front-end Development
+@sankung1 Front & Back End Development
